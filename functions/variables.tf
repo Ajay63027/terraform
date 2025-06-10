@@ -11,7 +11,7 @@ variable "instance_type" {
 variable "ec2_tags" {
     type = map(string)
     default = {
-        Name = "HelloWorld"
+        Name = "Roboshop"
         Purpose = "variables-demo"
     }
 }
@@ -43,3 +43,27 @@ variable "sg_tags" {
         Name = "allow-all"
     }
 }
+
+variable "environment" {
+    default = "prod"
+}
+
+variable "instances" {
+    default = ["mongodb", "redis", "mysql", "rabbitmq"]
+}
+
+variable "zone_id" {
+    default = "Z041894539JBJUU4ES2BO"
+}
+
+variable "domain_name" {
+    default = "ajay6.space"
+}
+
+variable "common_tags"{
+    default = {
+        Project = "roboshop"
+        Terraform = "true"
+    }
+}
+
